@@ -13,14 +13,20 @@
     <!-- TODO: add link tags, other meta tags, open graph info, etc. -->
   </head>
   <body>
-    <header>
-      <p>This is the header.</p>
-    </header>
+    {% block header %}
+      <header>
+        <p>This is the header.</p>
+      </header>
+    {% endblock %}
     <main>
-      {{ content | safe }}
+      {% block content %}
+        {{ content | safe }}
+      {% endblock %}
     </main>
-    <footer>
-      <p>This is the footer.</p>
-    </footer>
+    {% block footer %}
+      <footer>
+        <p>This is the footer.</p>
+      </footer>
+    {% endblock %}
   </body>
 </html>

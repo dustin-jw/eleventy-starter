@@ -1,0 +1,30 @@
+---
+title: About
+description: This is the about page. You might put biographical information here if it's for a personal website or portfolio.
+---
+
+{% extends 'layout.njk' %}
+
+{% block header %}
+  <header>
+    <p>
+      This header has custom content specific to the current page.
+    </p>
+  </header>
+{% endblock %}
+
+{% block footer %}
+  <footer>
+    <p>
+      This footer has custom content specific to the current page.
+    </p>
+  </footer>
+{% endblock %}
+
+{% block content %}
+  <h1>About</h1>
+
+  <p>
+    This is the About page. You may not want or need this, so feel free to delete it if it isn't useful to you!
+  </p>
+{% endblock %}
