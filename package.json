@@ -9,7 +9,7 @@
     "start": "eleventy --serve",
     "build": "eleventy",
     "clean": "rimraf dist",
-    "lint:html": "pa11y-ci './dist/**/*.html'"
+    "lint:html": "pa11y-ci -c .pa11yci.json './dist/**/*.html'"
   },
   "keywords": [],
   "author": "",
