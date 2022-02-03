@@ -8,7 +8,8 @@
     "prebuild": "npm run clean",
     "start": "eleventy --serve",
     "build": "eleventy",
-    "clean": "rimraf dist"
+    "clean": "rimraf dist",
+    "lint:html": "pa11y-ci './dist/**/*.html'"
   },
   "keywords": [],
   "author": "",
