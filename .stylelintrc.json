@@ -1,0 +1,9 @@
+{
+  "extends": [
+    "stylelint-config-standard-scss"
+  ],
+  "rules": {
+    "function-no-unknown": null,
+    "string-quotes": "single"
+  }
+}

@@ -13,7 +13,8 @@
     "sass:dev": "sass --watch --embed-source-map src/scss:dist",
     "sass:build": "sass --no-source-map --style=compressed src/scss:dist",
     "clean": "rimraf dist",
-    "lint:html": "pa11y-ci -c .pa11yci.json './dist/**/*.html'"
+    "lint:html": "pa11y-ci -c .pa11yci.json './dist/**/*.html'",
+    "lint:css": "stylelint 'src/scss/**/*.scss' --color --formatter verbose"
   },
   "keywords": [],
   "author": "",
