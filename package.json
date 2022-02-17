@@ -8,6 +8,7 @@
     "prebuild": "npm run clean",
     "start": "eleventy --serve",
     "build": "eleventy",
+    "sass": "sass src/scss/styles.scss:dist/styles.css",
     "clean": "rimraf dist",
     "lint:html": "pa11y-ci -c .pa11yci.json './dist/**/*.html'"
   },
