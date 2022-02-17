@@ -6,8 +6,10 @@
   "scripts": {
     "prestart": "npm run clean",
     "prebuild": "npm run clean",
-    "start": "eleventy --serve",
-    "build": "eleventy",
+    "start": "run-p eleventy:dev sass:dev",
+    "build": "run-s eleventy:build sass:build",
+    "eleventy:dev": "eleventy --serve",
+    "eleventy:build": "eleventy",
     "sass:dev": "sass --watch --embed-source-map src/scss:dist",
     "sass:build": "sass --no-source-map --style=compressed src/scss:dist",
     "clean": "rimraf dist",
