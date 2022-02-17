@@ -1,0 +1,8 @@
+@use '../tools/functions';
+
+h1 {
+  font-size: functions.fluid-size('mega');
+  font-family: functions.font-family('sans');
+  line-height: calc(1em + 0.5rem);
+  margin-bottom: 0.65em;
+}

@@ -1,0 +1,23 @@
+@use 'sass:map';
+@use 'sass:math';
+@use '../settings/modular-scale';
+@use '../settings/font-families';
+
+@function scale-value($key) {
+  @return map.get(modular-scale.$scale-values, $key);
+}
+
+@function font-family($key) {
+  @return map.get(font-families.$font-families, $key);
+}
+
+@function fluid-size($key) {
+  $min: scale-value($key);
+  $max: $min * modular-scale.$fluid-expansion;
+
+  // do some math so we can linearly scale the size between the min and max size
+  $slope: math.div($max - $min, modular-scale.$bp-max-size - modular-scale.$bp-min-size);
+  $y-axis-intersection: (modular-scale.$bp-min-size * $slope * -1) + $min;
+
+  @return clamp(#{$min}rem, #{$y-axis-intersection}rem + #{$slope * 100}vw, #{$max}rem);
+}

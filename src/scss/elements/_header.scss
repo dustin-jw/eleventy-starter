@@ -1,0 +1,5 @@
+@use '../tools/functions';
+
+header {
+  padding-block: functions.fluid-size('base');
+}

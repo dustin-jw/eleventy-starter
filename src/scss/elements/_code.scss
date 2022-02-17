@@ -1,0 +1,5 @@
+@use '../tools/functions';
+
+code {
+  font-family: functions.font-family('mono');
+}

@@ -1,0 +1,5 @@
+@use '../tools/functions';
+
+footer {
+  padding-block: functions.fluid-size('base');
+}

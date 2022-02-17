@@ -1,0 +1,5 @@
+@use '../tools/functions';
+
+:root {
+  font-family: functions.font-family('serif');
+}

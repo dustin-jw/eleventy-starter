@@ -15,17 +15,23 @@
   <body>
     {% block header %}
       <header>
-        <p>This is the header.</p>
+        <div class="cmp-container">
+          <p>This is the header.</p>
+        </div>
       </header>
     {% endblock %}
     <main>
       {% block content %}
-        {{ content | safe }}
+        <article class="cmp-container">
+          {{ content | safe }}
+        </article>
       {% endblock %}
     </main>
     {% block footer %}
       <footer>
-        <p>This is the footer.</p>
+        <div class="cmp-container">
+          <p>This is the footer.</p>
+        </div>
       </footer>
     {% endblock %}
   </body>

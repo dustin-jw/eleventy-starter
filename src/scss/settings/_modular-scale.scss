@@ -1,0 +1,39 @@
+@use 'sass:map';
+@use 'sass:math';
+
+// common ratios you can use for visual harmony
+$scale-ratios: (
+  'minorSecond': 1.067,
+  'majorSecond': 1.125,
+  'minorThird': 1.2,
+  'majorThird': 1.25,
+  'perfectFourth': 1.333,
+  'augmentedFourth': 1.414,
+  'perfectFifth': 1.5,
+  'goldenRatio': 1.618,
+);
+
+// choose from the list, depending on your preference
+$scale-ratio: map.get($scale-ratios, 'perfectFourth');
+
+// multipliers to be used for spacing and font-sizes
+$scale-values: (
+  'nano': (math.div(1, math.pow($scale-ratio, 5))),
+  'micro': (math.div(1, math.pow($scale-ratio, 4))),
+  'milli': (math.div(1, math.pow($scale-ratio, 3))),
+  'centi': (math.div(1, math.pow($scale-ratio, 2))),
+  'deci': (math.div(1, $scale-ratio)),
+  'base': 1,
+  'deca': (1 * $scale-ratio),
+  'hecto': (1 * math.pow($scale-ratio, 2)),
+  'kilo': (1 * math.pow($scale-ratio, 3)),
+  'mega': (1 * math.pow($scale-ratio, 4)),
+  'giga': (1 * math.pow($scale-ratio, 5)),
+);
+
+// determines how much the scale value can be increased on large screens
+$fluid-expansion: $scale-ratio;
+
+// the widths (in rem) at which our fluid size system should render the min/max sizes
+$bp-min-size: 30;
+$bp-max-size: 60;

@@ -1,0 +1,21 @@
+// generic level, should have very low specificity
+@use 'generic/reset';
+@use 'generic/sticky-footer';
+
+// elements, default rules that should be easy to override
+@use 'elements/root';
+@use 'elements/h1';
+@use 'elements/h2';
+@use 'elements/h3';
+@use 'elements/h4';
+@use 'elements/p';
+@use 'elements/header';
+@use 'elements/footer';
+@use 'elements/code';
+
+// components for more specific styles, use BEM style for selectors
+@use 'components/container';
+@use 'components/stack';
+
+// utilities, prefix with `.util-` and include last for the cascade
+@use 'utilities/utilities';
