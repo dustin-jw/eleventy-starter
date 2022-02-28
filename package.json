@@ -29,5 +29,8 @@
     "sass": "^1.49.7",
     "stylelint": "^14.5.1",
     "stylelint-config-standard-scss": "^3.0.0"
+  },
+  "dependencies": {
+    "bootstrap": "^5.1.3"
   }
 }
