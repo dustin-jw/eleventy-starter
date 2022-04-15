@@ -18,7 +18,8 @@
     "lint": "run-s lint:html lint:css",
     "prelint:html": "npm run build",
     "lint:html": "pa11y-ci -c .pa11yci.json './dist/**/*.html'",
-    "lint:css": "stylelint 'src/scss/**/*.scss' --color --formatter verbose"
+    "lint:css": "stylelint 'src/scss/**/*.scss' --color --formatter verbose",
+    "lint:js": "eslint . --ext .js,.ts"
   },
   "keywords": [],
   "author": "",
