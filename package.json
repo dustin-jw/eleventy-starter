@@ -6,8 +6,8 @@
   "scripts": {
     "prestart": "npm run clean",
     "prebuild": "npm run clean",
-    "start": "run-p eleventy:dev sass:dev",
-    "build": "run-s eleventy:build sass:build",
+    "start": "run-p eleventy:dev sass:dev js:dev",
+    "build": "run-s eleventy:build sass:build js:build",
     "eleventy:dev": "eleventy --serve",
     "eleventy:build": "eleventy",
     "sass:dev": "sass --watch --embed-source-map src/scss:dist",
