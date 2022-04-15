@@ -23,6 +23,7 @@
   "license": "ISC",
   "devDependencies": {
     "@11ty/eleventy": "^1.0.0",
+    "esbuild": "^0.14.36",
     "npm-run-all": "^4.1.5",
     "pa11y-ci": "^3.0.1",
     "rimraf": "^3.0.2",
