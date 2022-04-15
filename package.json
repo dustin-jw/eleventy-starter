@@ -15,7 +15,7 @@
     "js:dev": "esbuild src/js/*.js src/js/*.ts --format=esm --bundle=true --splitting=true --outdir=dist --watch --sourcemap=inline",
     "js:build": "esbuild src/js/*.js src/js/*.ts --format=esm --bundle=true --splitting=true --outdir=dist --minify=true",
     "clean": "rimraf dist",
-    "lint": "run-s lint:html lint:css",
+    "lint": "run-s lint:html lint:css lint:js",
     "prelint:html": "npm run build",
     "lint:html": "pa11y-ci -c .pa11yci.json './dist/**/*.html'",
     "lint:css": "stylelint 'src/scss/**/*.scss' --color --formatter verbose",
