@@ -4,6 +4,9 @@
     "eslint:recommended",
     "airbnb-base"
   ],
+  "env": {
+    "jest": true
+  },
   "rules": {
     "import/prefer-default-export": 0
   }
