@@ -57,6 +57,7 @@
     "webpack-cli": "^4.10.0"
   },
   "browserslist": [
-    ">0.25%"
+    ">0.25%",
+    "not supports es6-module"
   ]
 }
