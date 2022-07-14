@@ -1,9 +1,10 @@
+/* global VERSION */
 /* eslint-disable no-restricted-globals */
 /* eslint-env serviceworker */
 
 const CACHE_KEYS = {
-  PRE_CACHE: 'precache',
-  RUNTIME: 'runtime',
+  PRE_CACHE: `precache-${VERSION}`,
+  RUNTIME: `runtime-${VERSION}`,
 };
 
 // add any urls that you don't want to be cached
