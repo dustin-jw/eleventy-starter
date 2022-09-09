@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "node": ">=16"
+  },
   "scripts": {
-    "prestart": "npm run clean",
-    "prebuild": "npm run clean",
+    "prestart": "check-node-version --package && npm run clean",
+    "prebuild": "check-node-version --package && npm run clean",
     "start": "run-p eleventy:dev sass:dev js:dev js:dev:legacy",
     "build": "run-s eleventy:build sass:build js:build js:build:legacy",
     "eleventy:dev": "eleventy --serve",
@@ -37,6 +40,7 @@
     "@typescript-eslint/parser": "^5.36.2",
     "babel-jest": "^29.0.2",
     "babel-loader": "^8.2.5",
+    "check-node-version": "^4.2.1",
     "dotenv": "^16.0.2",
     "esbuild": "^0.15.7",
     "eslint": "^8.23.0",
