@@ -69,4 +69,7 @@ npm run test -- --watch
 
 # run tests and generate a coverage report
 npm run test -- --coverage
+
+# update any outdated npm dependencies
+npm run update-deps
 ```
