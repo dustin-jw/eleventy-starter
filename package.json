@@ -25,7 +25,9 @@
     "lint:html": "pa11y-ci -c .pa11yci.json './dist/**/*.html'",
     "lint:css": "stylelint 'src/scss/**/*.scss' --color --formatter verbose",
     "lint:js": "eslint . --ext .js,.ts",
-    "test": "jest"
+    "test": "jest",
+    "update-deps": "ncu -u",
+    "postupdate-deps": "npm install"
   },
   "keywords": [],
   "author": "",
