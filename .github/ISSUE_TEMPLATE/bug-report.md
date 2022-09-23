@@ -2,7 +2,7 @@
 name: "Bug Report"
 about: "Report issues to help improve the project."
 title: "[Bug] "
-labels: "Type: Bug"
+labels: "bug"
 assignees: ""
 ---
 
