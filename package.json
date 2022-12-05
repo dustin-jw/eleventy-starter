@@ -55,7 +55,7 @@
     "pa11y-ci": "^3.0.1",
     "rimraf": "^3.0.2",
     "sass": "^1.56.1",
-    "stylelint": "^14.15.0",
+    "stylelint": "^14.16.0",
     "stylelint-config-standard-scss": "^6.1.0",
     "ts-jest": "^29.0.3",
     "ts-loader": "^9.4.1",
