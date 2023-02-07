@@ -18,17 +18,37 @@ $scale-ratio: map.get($scale-ratios, 'perfectFourth');
 
 // multipliers to be used for spacing and font-sizes
 $scale-values: (
-  'nano': (math.div(1, math.pow($scale-ratio, 5))),
-  'micro': (math.div(1, math.pow($scale-ratio, 4))),
-  'milli': (math.div(1, math.pow($scale-ratio, 3))),
-  'centi': (math.div(1, math.pow($scale-ratio, 2))),
-  'deci': (math.div(1, $scale-ratio)),
+  'nano': (
+    math.div(1, math.pow($scale-ratio, 5)),
+  ),
+  'micro': (
+    math.div(1, math.pow($scale-ratio, 4)),
+  ),
+  'milli': (
+    math.div(1, math.pow($scale-ratio, 3)),
+  ),
+  'centi': (
+    math.div(1, math.pow($scale-ratio, 2)),
+  ),
+  'deci': (
+    math.div(1, $scale-ratio),
+  ),
   'base': 1,
-  'deca': (1 * $scale-ratio),
-  'hecto': (1 * math.pow($scale-ratio, 2)),
-  'kilo': (1 * math.pow($scale-ratio, 3)),
-  'mega': (1 * math.pow($scale-ratio, 4)),
-  'giga': (1 * math.pow($scale-ratio, 5)),
+  'deca': (
+    1 * $scale-ratio,
+  ),
+  'hecto': (
+    1 * math.pow($scale-ratio, 2),
+  ),
+  'kilo': (
+    1 * math.pow($scale-ratio, 3),
+  ),
+  'mega': (
+    1 * math.pow($scale-ratio, 4),
+  ),
+  'giga': (
+    1 * math.pow($scale-ratio, 5),
+  ),
 );
 
 // determines how much the scale value can be increased on large screens

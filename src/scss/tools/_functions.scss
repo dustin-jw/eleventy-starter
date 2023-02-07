@@ -16,8 +16,15 @@
   $max: $min * modular-scale.$fluid-expansion;
 
   // do some math so we can linearly scale the size between the min and max size
-  $slope: math.div($max - $min, modular-scale.$bp-max-size - modular-scale.$bp-min-size);
+  $slope: math.div(
+    $max - $min,
+    modular-scale.$bp-max-size - modular-scale.$bp-min-size
+  );
   $y-axis-intersection: (modular-scale.$bp-min-size * $slope * -1) + $min;
 
-  @return clamp(#{$min}rem, #{$y-axis-intersection}rem + #{$slope * 100}vw, #{$max}rem);
+  @return clamp(
+    #{$min}rem,
+    #{$y-axis-intersection}rem + #{$slope * 100}vw,
+    #{$max}rem
+  );
 }
