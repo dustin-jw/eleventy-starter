@@ -23,7 +23,9 @@
     "lint": "run-s lint:css lint:js",
     "lint:css": "stylelint 'src/scss/**/*.scss' --color --formatter verbose",
     "lint:js": "eslint . --ext .js,.ts",
-    "test": "vitest --run",
+    "test": "run-s test:js test:e2e",
+    "test:js": "vitest --run",
+    "test:e2e": "playwright test",
     "update-deps": "ncu -u",
     "postupdate-deps": "npm install"
   },
