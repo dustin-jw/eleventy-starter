@@ -13,7 +13,7 @@ config();
  * See https://playwright.dev/docs/test-configuration.
  */
 export default defineConfig({
-  testDir: './tests',
+  testDir: './e2e-tests',
   /* Maximum time one test can run for. */
   timeout: 30 * 1000,
   expect: {
