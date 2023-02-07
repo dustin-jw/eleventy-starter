@@ -19,7 +19,7 @@
     "js:build": "esbuild src/js/*.js  src/js/*.ts --format=esm --bundle=true --splitting=true --outdir=dist --minify=true",
     "js:dev:legacy": "NODE_ENV=development webpack --progress -w",
     "js:build:legacy": "NODE_ENV=production webpack --progress",
-    "clean": "rimraf dist",
+    "clean": "rm -rf dist",
     "lint": "run-s lint:html lint:css lint:js",
     "prelint:html": "npm run build",
     "lint:html": "pa11y-ci -c .pa11yci.json './dist/**/*.html'",
