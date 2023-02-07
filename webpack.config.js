@@ -4,12 +4,17 @@ const fs = require('fs');
 const path = require('path');
 
 // return any files matching in the directory (non-recursively)
-const getEntryPoints = (directory) => fs.readdirSync(path.join(__dirname, directory))
-  .filter((file) => !fs.statSync(path.join(directory, file)).isDirectory())
-  .reduce((entries, file) => ({
-    ...entries,
-    [file.split('.')[0]]: `./${directory}/${file}`,
-  }), {});
+const getEntryPoints = (directory) =>
+  fs
+    .readdirSync(path.join(__dirname, directory))
+    .filter((file) => !fs.statSync(path.join(directory, file)).isDirectory())
+    .reduce(
+      (entries, file) => ({
+        ...entries,
+        [file.split('.')[0]]: `./${directory}/${file}`,
+      }),
+      {},
+    );
 
 module.exports = {
   mode: process.env.NODE_ENV === 'development' ? 'development' : 'production',
@@ -29,10 +34,7 @@ module.exports = {
     ],
   },
   resolve: {
-    extensions: [
-      '.ts',
-      '.js',
-    ],
+    extensions: ['.ts', '.js'],
   },
   output: {
     filename: '[name].legacy.js',
