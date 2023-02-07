@@ -21,7 +21,6 @@
     "js:build:legacy": "NODE_ENV=production webpack --progress",
     "clean": "rm -rf dist",
     "lint": "run-s lint:css lint:js",
-    "prelint:html": "npm run build",
     "lint:css": "stylelint 'src/scss/**/*.scss' --color --formatter verbose",
     "lint:js": "eslint . --ext .js,.ts",
     "test": "vitest --run",

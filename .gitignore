@@ -2,3 +2,6 @@ node_modules
 dist
 .env
 coverage
+/test-results/
+/playwright-report/
+/playwright/.cache/
