@@ -12,7 +12,7 @@ const getEntryPoints = (directory) => fs.readdirSync(path.join(__dirname, direct
   }), {});
 
 module.exports = {
-  mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
+  mode: process.env.NODE_ENV === 'development' ? 'development' : 'production',
   entry: () => getEntryPoints('src/js'),
   module: {
     rules: [
