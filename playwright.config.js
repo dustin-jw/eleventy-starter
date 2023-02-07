@@ -5,11 +5,6 @@ import { config } from 'dotenv';
 config();
 
 /**
- * Read environment variables from file.
- * https://github.com/motdotla/dotenv
- */
-
-/**
  * See https://playwright.dev/docs/test-configuration.
  */
 export default defineConfig({
@@ -75,9 +70,9 @@ export default defineConfig({
   /* Folder for test artifacts such as screenshots, videos, traces, etc. */
   // outputDir: 'test-results/',
 
-  /* Run your local dev server before starting the tests */
-  // webServer: {
-  //   command: 'npm run start',
-  //   port: 3000,
-  // },
+  /* Run a local file server before starting the tests */
+  webServer: {
+    command: 'npx serve dist',
+    port: 3000,
+  },
 });
