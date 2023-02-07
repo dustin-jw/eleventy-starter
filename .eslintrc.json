@@ -5,14 +5,13 @@
     "tsconfigRootDir": ".",
     "project": ["./tsconfig.json"]
   },
+  "env": {
+    "browser": true,
+    "node": true
+  },
   "plugins": ["@typescript-eslint"],
   "extends": [
     "eslint:recommended",
-    "plugin:@typescript-eslint/recommended",
-    "airbnb-base",
-    "airbnb-typescript/base"
-  ],
-  "rules": {
-    "import/prefer-default-export": 0
-  }
+    "plugin:@typescript-eslint/recommended"
+  ]
 }
