@@ -38,6 +38,7 @@ Things to update:
   - `background_color`: background color for the splash screen
 - `robots.txt`: update if you want to block certain robots/crawlers
 - Any placeholder pages, styles, scripts, or snippets that you won't need for your site
+- Copy the contents of `.env.example` into a `.env` file to access environment variables correctly
 
 ## Getting Started
 
