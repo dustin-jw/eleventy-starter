@@ -60,7 +60,6 @@ npm run lint
 # or run linters individually
 npm run lint:css
 npm run lint:js
-npm run lint:html
 
 # run tests once
 npm run test
@@ -70,6 +69,9 @@ npm run test -- --watch
 
 # run tests and generate a coverage report
 npm run test -- --coverage
+
+# run end to end tests
+npm run test:e2e
 
 # update any outdated npm dependencies
 npm run update-deps
