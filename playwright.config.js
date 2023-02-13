@@ -41,14 +41,14 @@ export default defineConfig({
   /* Configure projects for major browsers */
   projects: [
     {
-      name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
+      name: 'Default',
+      testIgnore: /.*accessibility.spec.js/,
+      retries: 0,
     },
-
-    /* Test against mobile viewports. */
     {
-      name: 'Mobile Safari',
-      use: { ...devices['iPhone 12'] },
+      name: 'Accessibility',
+      testMatch: /.*accessibility.spec.js/,
+      retries: 2,
     },
   ],
 
@@ -57,7 +57,7 @@ export default defineConfig({
 
   /* Run a local file server before starting the tests */
   webServer: {
-    command: 'npx serve dist',
-    port: 3000,
+    command: 'npx serve -p 8080 dist',
+    port: 8080,
   },
 });
