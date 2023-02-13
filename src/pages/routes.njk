@@ -1,0 +1,9 @@
+---
+permalink: /routes.json
+eleventyExcludeFromCollections: true
+---
+[
+  {% for page in collections.all %}
+    "{{ page.url | url }}"{% if not loop.last %},{% endif %}
+  {% endfor %}
+]
