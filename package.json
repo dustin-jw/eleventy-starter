@@ -11,7 +11,7 @@
     "prebuild": "check-node-version --package && npm run clean",
     "start": "run-p eleventy:dev sass:dev js:dev js:dev:legacy",
     "build": "run-s eleventy:build sass:build js:build js:build:legacy",
-    "eleventy:dev": "eleventy --serve",
+    "eleventy:dev": "eleventy --serve --incremental",
     "eleventy:build": "eleventy",
     "sass:dev": "sass --watch --embed-source-map src/scss:dist",
     "sass:build": "sass --no-source-map --style=compressed src/scss:dist",
