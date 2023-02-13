@@ -1,8 +1,9 @@
 const fs = require('fs');
 
 module.exports = function (eleventyConfig) {
-  eleventyConfig.addWatchTarget('./src/scss/');
-  eleventyConfig.addWatchTarget('./src/js/');
+  eleventyConfig.setServerOptions({
+    watch: ['dist/**/*.css', 'dist/**/*.js'],
+  });
 
   eleventyConfig.addPassthroughCopy({ 'src/public': '/' });
 
