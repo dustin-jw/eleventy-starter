@@ -44,7 +44,7 @@
     "babel-loader": "^9.1.2",
     "check-node-version": "^4.2.1",
     "dotenv": "^16.0.3",
-    "esbuild": "^0.17.8",
+    "esbuild": "^0.17.9",
     "eslint": "^8.34.0",
     "eslint-config-prettier": "^8.6.0",
     "npm-check-updates": "^16.7.4",
