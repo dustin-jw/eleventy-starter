@@ -6,10 +6,7 @@
   clip-path: inset(50%);
 
   &:focus {
-    left: 0;
-    right: auto;
-    top: 0;
-    bottom: auto;
+    inset: 0 auto auto 0;
     clip: auto;
     clip-path: none;
   }
