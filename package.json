@@ -25,9 +25,7 @@
     "lint:js": "eslint . --ext .js,.ts",
     "test": "vitest --run",
     "test:e2e": "playwright test",
-    "pretest:e2e": "npm run build",
-    "update-deps": "ncu -u",
-    "postupdate-deps": "npm install"
+    "pretest:e2e": "npm run build"
   },
   "keywords": [],
   "author": "",
