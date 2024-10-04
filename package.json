@@ -6,6 +6,7 @@
   "engines": {
     "node": ">=20"
   },
+  "type": "module",
   "scripts": {
     "prestart": "check-node-version --package && npm run clean",
     "prebuild": "check-node-version --package && npm run clean",

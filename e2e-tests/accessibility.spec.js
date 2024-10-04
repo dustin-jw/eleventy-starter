@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
-import pages from '../dist/routes.json';
+import pages from '../dist/routes.json' assert { type: 'json' };
 
 test.describe('automated accessibility checks', () => {
   pages.forEach((route) => {

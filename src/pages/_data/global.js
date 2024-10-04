@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   // generate a random string for service worker versioning, such as "36f4-1234-8c7a"
   random() {
     const segment = () =>
