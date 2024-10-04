@@ -1,5 +1,6 @@
-require('dotenv').config();
+import { config } from 'dotenv';
+config();
 
-module.exports = {
+export default {
   BASE_URL: process.env.BASE_URL,
 };

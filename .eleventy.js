@@ -1,15 +1,15 @@
-module.exports = function (eleventyConfig) {
+export default function(eleventyConfig) {
   eleventyConfig.setServerOptions({
     watch: ['dist/**/*.css', 'dist/**/*.js'],
   });
 
   eleventyConfig.addPassthroughCopy({ 'src/public': '/' });
-
-  return {
-    dir: {
-      input: 'src/pages',
-      output: 'dist',
-      includes: '../partials',
-    },
-  };
 };
+
+export const config = {
+  dir: {
+    input: 'src/pages',
+    output: 'dist',
+    includes: '../partials',
+  },
+}
